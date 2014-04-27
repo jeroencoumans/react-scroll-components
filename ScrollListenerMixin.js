@@ -31,13 +31,6 @@ var ScrollListenerMixin = {
     }
   },
 
-  shouldComponentUpdate: function(nextProps, nextState) {
-    return (
-      nextState.scrollTop !== this.state.scrollTop ||
-      nextState.isScrolling !== this.state.isScrolling
-    )
-  },
-
   _onPageScrollEnd: function () {
     var scrollTop = getScrollTop();
     if (scrollTop === this.state.scrollTop) {
@@ -45,7 +38,7 @@ var ScrollListenerMixin = {
       this.setState({ isScrolling: false });
 
       if (typeof this.props.onPageScrollEnd === 'function') {
-        this.props.onPageScrollEnd(scrollTop, isScrolling);
+        this.props.onPageScrollEnd(scrollTop);
       }
     }
   },
