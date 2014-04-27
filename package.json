@@ -4,7 +4,8 @@
   "description": "A set of components that react to page scrolling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/react-tools/bin/jsx -x jsx ./jsx ."
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
   "homepage": "https://github.com/jeroencoumans/react-scroll-components",
   "peerDependencies": {
     "react": "^0.10.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "react-tools": "^0.10.0"
   }
 }

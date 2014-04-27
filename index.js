@@ -1,5 +1,7 @@
-var ScrollBlocker = require('src/ScrollBlocker');
+var ScrollBlocker = require('./ScrollBlocker');
+var ScrollListenerMixin = require('./ScrollListenerMixin');
 
 module.exports = {
-  ScrollBlocker: ScrollBlocker
+  ScrollBlocker: ScrollBlocker,
+  ScrollListenerMixin: ScrollListenerMixin
 }
