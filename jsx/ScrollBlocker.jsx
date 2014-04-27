@@ -16,7 +16,7 @@ var ScrollBlocker = React.createClass({
     });
 
     return (
-      <div className={cx(classes, this.props.className)}>
+      <div className={cx(this.props.className, classes)}>
         {this.props.children}
       </div>
     );
