@@ -37,8 +37,8 @@ var ScrollListenerMixin = {
       win.clearTimeout(this._pageScrollTimeout);
       this.setState({ isScrolling: false });
 
-      if (typeof this.props.onPageScrollEnd === 'function') {
-        this.props.onPageScrollEnd(scrollTop);
+      if (typeof this.onPageScrollEnd === 'function') {
+        this.onPageScrollEnd(scrollTop);
       }
     }
   },
@@ -54,8 +54,8 @@ var ScrollListenerMixin = {
     win.clearTimeout(this._pageScrollTimeout);
     this._pageScrollTimeout = win.setTimeout(this._onPageScrollEnd, this.props.endScrollTimeout);
 
-    if (typeof this.props.onPageScroll === 'function') {
-      this.props.onPageScroll(scrollTop, isScrolling);
+    if (typeof this.onPageScroll === 'function') {
+      this.onPageScroll(scrollTop, isScrolling);
     }
   }
 };
