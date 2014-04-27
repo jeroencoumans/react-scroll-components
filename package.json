@@ -1,0 +1,28 @@
+{
+  "name": "react-scroll-components",
+  "version": "0.0.1",
+  "description": "A set of components that react to page scrolling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeroencoumans/react-scroll-components.git"
+  },
+  "keywords": [
+    "react",
+    "scroll",
+    "scrolling",
+    "react-component"
+  ],
+  "author": "Jeroen Coumans <jeroencoumans@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeroencoumans/react-scroll-components/issues"
+  },
+  "homepage": "https://github.com/jeroencoumans/react-scroll-components",
+  "peerDependencies": {
+    "react": "^0.10.0"
+  }
+}
