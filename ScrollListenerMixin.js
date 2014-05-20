@@ -1,8 +1,5 @@
 var win = typeof window !== 'undefined' ? window : false;
-
-var getScrollTop = function () {
-  return win.pageYOffset || win.document.scrollTop || win.document.body.scrollTop || 0;
-}
+var ViewportMetrics = require('react/lib/ViewportMetrics');
 
 var ScrollListenerMixin = {
 
@@ -32,7 +29,7 @@ var ScrollListenerMixin = {
   },
 
   _onPageScrollEnd: function () {
-    var scrollTop = getScrollTop();
+    var scrollTop = ViewportMetrics.currentScrollTop;
     if (scrollTop === this.state.scrollTop) {
       win.clearTimeout(this._pageScrollTimeout);
       this.setState({ isScrolling: false });
@@ -44,7 +41,7 @@ var ScrollListenerMixin = {
   },
 
   _onPageScroll: function () {
-    var scrollTop = getScrollTop();
+    var scrollTop = ViewportMetrics.currentScrollTop;
 
     this.setState({
       scrollTop: scrollTop,
