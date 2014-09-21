@@ -1,6 +1,6 @@
 {
   "name": "react-scroll-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of components that react to page scrolling",
   "main": "index.js",
   "scripts": {
