@@ -20,7 +20,7 @@ argument. If you want to change the timeout, override your components'
 ## ScrollBlocker
 
 A very simple component that allows you to block any mouse events during
-scrolling. Make sure to include ScrollBlocker.css somewhere in your CSS.
+scrolling.
 
 ## Example
 

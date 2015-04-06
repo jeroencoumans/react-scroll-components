@@ -1,12 +1,17 @@
 /** @jsx React.DOM */
 var React = require('react');
-var spread = require('react/lib/Object.assign');
 
-var style = {
+var blockerStyle = {
   pointerEvents: 'none'
 };
 
 var ScrollBlocker = React.createClass({displayName: "ScrollBlocker",
+
+  propTypes: {
+    active: React.PropTypes.bool,
+    style: React.PropTypes.object,
+    children: React.PropTypes.node
+  },
 
   getDefaultProps: function () {
     return {
@@ -15,9 +20,10 @@ var ScrollBlocker = React.createClass({displayName: "ScrollBlocker",
   },
 
   render: function () {
+    var { style, active, ...other } = this.props;
 
     return (
-      React.createElement("div", {style: spread({}, this.props.style, this.props.active && style)}, 
+      React.createElement("div", React.__spread({},  other, {style: active && style}), 
         this.props.children
       )
     );
