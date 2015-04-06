@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/react-tools/bin/jsx -x jsx ./jsx ."
+    "prepublish": "./node_modules/react-tools/bin/jsx -x jsx ./jsx ."
   },
   "repository": {
     "type": "git",
