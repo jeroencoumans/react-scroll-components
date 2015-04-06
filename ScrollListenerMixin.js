@@ -1,15 +1,17 @@
+'use strict';
+
 var win = typeof window !== 'undefined' ? window : false;
 var ViewportMetrics = require('react/lib/ViewportMetrics');
 
 var ScrollListenerMixin = {
 
-  getDefaultProps: function() {
+  getDefaultProps: function () {
     return {
       endScrollTimeout: 300
     };
   },
 
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       scrollTop: 0,
       isScrolling: false

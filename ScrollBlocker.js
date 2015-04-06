@@ -1,8 +1,12 @@
 /** @jsx React.DOM */
 var React = require('react');
-var cx = require('react/lib/cx');
+var spread = require('react/lib/Object.assign');
 
-var ScrollBlocker = React.createClass({displayName: 'ScrollBlocker',
+var style = {
+  pointerEvents: 'none'
+};
+
+var ScrollBlocker = React.createClass({displayName: "ScrollBlocker",
 
   getDefaultProps: function () {
     return {
@@ -11,12 +15,9 @@ var ScrollBlocker = React.createClass({displayName: 'ScrollBlocker',
   },
 
   render: function () {
-    var classes = cx({
-      'ScrollBlocker': this.props.active
-    });
 
     return (
-      React.DOM.div( {className:cx(this.props.className, classes)}, 
+      React.createElement("div", {style: spread({}, this.props.style, this.props.active && style)}, 
         this.props.children
       )
     );
