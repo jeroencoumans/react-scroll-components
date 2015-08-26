@@ -20,13 +20,21 @@ var ScrollListenerMixin = {
 
   componentDidMount: function () {
     if (win) {
-      win.addEventListener('scroll', this._onPageScroll);
+      if (win.addEventListener) {
+        win.addEventListener('scroll', this._onPageScroll);
+      } else if (win.attachEvent) {
+        win.attachEvent('onscroll', this._onPageScroll);
+      }
     }
   },
 
   componentWillUnmount: function () {
     if (win) {
-      win.removeEventListener('scroll', this._onPageScroll);
+      if (win.removeEventListener) {
+        win.removeEventListener('scroll', this._onPageScroll);
+      } else if (win.detachEvent) {
+        win.detachEvent('onscroll', this._onPageScroll);
+      }
     }
   },
 
