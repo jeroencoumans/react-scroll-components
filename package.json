@@ -1,11 +1,11 @@
 {
   "name": "react-scroll-components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A set of components that react to page scrolling",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "./node_modules/react-tools/bin/jsx -x jsx ./jsx ."
+    "prepublish": "./node_modules/react-tools/bin/jsx --harmony -x jsx ./jsx ."
   },
   "repository": {
     "type": "git",
