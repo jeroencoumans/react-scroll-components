@@ -1,6 +1,4 @@
-/** @jsx React.DOM */
 var React = require('react');
-var assign = require('react/lib/Object.assign');
 
 var blockerStyle = {
   pointerEvents: 'none'
@@ -24,7 +22,7 @@ var ScrollBlocker = React.createClass({
     var { style, active, ...other } = this.props;
 
     return (
-      <div {...other} style={assign({}, style, active && blockerStyle)}>
+      <div {...other} style={Object.assign({}, style, active && blockerStyle)}>
         {this.props.children}
       </div>
     );
